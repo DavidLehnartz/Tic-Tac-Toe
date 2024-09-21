@@ -1,0 +1,109 @@
+/* STYLE */
+
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #212121;
+}
+
+h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: #efefef;
+}
+
+p {
+    font-size: 24px;
+    color: #efefef;
+}
+
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(3, 150px);
+    grid-template-rows: repeat(3, 150px);
+}
+
+.cell {
+    width: 150px;
+    height: 150px;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #efefef;
+    cursor: pointer;
+}
+
+.cell:nth-child(1) {
+    /* Oben links */
+    border-right: 4px solid #f1f1f1;
+    border-bottom: 4px solid #eceaea;
+}
+
+.cell:nth-child(2) {
+    /* Oben Mitte */
+    border-left: 4px solid #212121;
+    border-right: 4px solid #212121;
+    border-bottom: 4px solid #212121;
+}
+
+.cell:nth-child(3) {
+    /* Oben rechts */
+    border-left: 4px solid #212121;
+    border-bottom: 4px solid #212121;
+}
+
+.cell:nth-child(4) {
+    /* Mitte links */
+    border-top: 4px solid #212121;
+    border-right: 4px solid #212121;
+    border-bottom: 4px solid #212121;
+}
+
+.cell:nth-child(5) {
+    /* Mitte Mitte */
+    border: 4px solid #212121;
+}
+
+.cell:nth-child(6) {
+    /* Mitte rechts */
+    border-top: 4px solid #333;
+    border-left: 4px solid #333;
+    border-bottom: 4px solid #333;
+}
+
+.cell:nth-child(7) {
+    /* Unten links */
+    border-top: 4px solid #212121;
+    border-right: 4px solid #212121;
+}
+
+.cell:nth-child(8) {
+    /* Unten Mitte */
+    border-left: 4px solid #212121;
+    border-top: 4px solid #212121;
+    border-right: 4px solid #212121;
+}
+
+.cell:nth-child(9) {
+    /* Unten rechts */
+    border-left: 4px solid #212121;
+    border-top: 4px solid #212121;
+}
+
+#status {
+    margin-top: 20px;
+    font-size: 1.5rem;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+}

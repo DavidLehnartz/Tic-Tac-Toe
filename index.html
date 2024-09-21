@@ -9,8 +9,23 @@
     <script src="./script.js"></script>
 </head>
 
-<body>
-
+<body onload="init()">
+    <h1>Tic Tac Toe</h1>
+    <div class="game-board">
+        <div id="cell_0" class="cell" onclick="handleClick(0)"></div>
+        <div id="cell_1" class="cell" onclick="handleClick(1)"></div>
+        <div id="cell_2" class="cell" onclick="handleClick(2)"></div>
+        <div id="cell_3" class="cell" onclick="handleClick(3)"></div>
+        <div id="cell_4" class="cell" onclick="handleClick(4)"></div>
+        <div id="cell_5" class="cell" onclick="handleClick(5)"></div>
+        <div id="cell_6" class="cell" onclick="handleClick(6)"></div>
+        <div id="cell_7" class="cell" onclick="handleClick(7)"></div>
+        <div id="cell_8" class="cell" onclick="handleClick(8)"></div>
+    </div>
+    <div>
+        <p id="players_turn_status"></p>
+    </div>
+    <button onclick="resetGame()">Neues Spiel</button>
 </body>
 
 </html>
