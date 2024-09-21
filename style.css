@@ -12,6 +12,13 @@ body {
     background-color: #212121;
 }
 
+/* main{
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+} */
+
 h1 {
     font-size: 40px;
     margin-bottom: 20px;
@@ -106,4 +113,52 @@ button {
     padding: 10px 20px;
     font-size: 1rem;
     cursor: pointer;
+}
+
+
+.game-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+
+.player-x {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    /* gleiche Breite wie SVG */
+    height: 80px;
+    /* gleiche Höhe wie SVG */
+    margin-left: 64px;
+}
+
+
+.player-o {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    /* gleiche Breite wie SVG */
+    height: 80px;
+    /* gleiche Höhe wie SVG */
+    margin-right: 64px;
+}
+
+.headline {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.reset-btn {
+    display: flex;
+    justify-content: center;
+}
+
+
+.players-turn-status {
+    display: flex;
+    justify-content: center;
 }

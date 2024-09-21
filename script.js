@@ -31,7 +31,7 @@ function init() {
 
 // Players Turn Status
 function showPlayersTurn() {
-    document.getElementById('players_turn_status').innerHTML = `It\`s player $ currentplayer turn`;
+    document.getElementById('players_turn_status').innerHTML = `It\`s player $ currentPlayer turn`;
 }
 
 
