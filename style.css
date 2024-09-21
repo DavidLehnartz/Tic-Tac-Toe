@@ -12,12 +12,12 @@ body {
     background-color: #212121;
 }
 
-/* main{
+main{
     display: flex;
     flex-direction:column;
     justify-content: center;
     align-items: center;
-} */
+}
 
 h1 {
     font-size: 40px;
@@ -130,7 +130,7 @@ button {
     /* gleiche Breite wie SVG */
     height: 80px;
     /* gleiche Höhe wie SVG */
-    margin-left: 64px;
+    margin-right: 96px;
 }
 
 
@@ -142,7 +142,7 @@ button {
     /* gleiche Breite wie SVG */
     height: 80px;
     /* gleiche Höhe wie SVG */
-    margin-right: 64px;
+    margin-left: 96px;
 }
 
 .headline {
