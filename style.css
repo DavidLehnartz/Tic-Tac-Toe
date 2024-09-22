@@ -12,12 +12,19 @@ body {
     background-color: #212121;
 }
 
-main{
+
+main {
     display: flex;
-    flex-direction:column;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
+
+
+.d_none{
+    display: none;
+}
+
 
 h1 {
     font-size: 40px;
@@ -25,16 +32,38 @@ h1 {
     color: #efefef;
 }
 
+
+h2{
+    color: #efefef;
+    margin: 0px;
+}
+
+
 p {
     font-size: 24px;
     color: #efefef;
 }
+
+
+.headline {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.game-wrapper {
+    display: flex;
+    align-items: center;
+}
+
 
 .game-board {
     display: grid;
     grid-template-columns: repeat(3, 150px);
     grid-template-rows: repeat(3, 150px);
 }
+
 
 .cell {
     width: 150px;
@@ -47,11 +76,13 @@ p {
     cursor: pointer;
 }
 
+
 .cell:nth-child(1) {
     /* Oben links */
     border-right: 4px solid #f1f1f1;
     border-bottom: 4px solid #eceaea;
 }
+
 
 .cell:nth-child(2) {
     /* Oben Mitte */
@@ -60,11 +91,13 @@ p {
     border-bottom: 4px solid #212121;
 }
 
+
 .cell:nth-child(3) {
     /* Oben rechts */
     border-left: 4px solid #212121;
     border-bottom: 4px solid #212121;
 }
+
 
 .cell:nth-child(4) {
     /* Mitte links */
@@ -73,10 +106,12 @@ p {
     border-bottom: 4px solid #212121;
 }
 
+
 .cell:nth-child(5) {
     /* Mitte Mitte */
     border: 4px solid #212121;
 }
+
 
 .cell:nth-child(6) {
     /* Mitte rechts */
@@ -85,11 +120,13 @@ p {
     border-bottom: 4px solid #333;
 }
 
+
 .cell:nth-child(7) {
     /* Unten links */
     border-top: 4px solid #212121;
     border-right: 4px solid #212121;
 }
+
 
 .cell:nth-child(8) {
     /* Unten Mitte */
@@ -98,16 +135,19 @@ p {
     border-right: 4px solid #212121;
 }
 
+
 .cell:nth-child(9) {
     /* Unten rechts */
     border-left: 4px solid #212121;
     border-top: 4px solid #212121;
 }
 
+
 #status {
     margin-top: 20px;
     font-size: 1.5rem;
 }
+
 
 button {
     padding: 10px 20px;
@@ -116,9 +156,9 @@ button {
 }
 
 
-.game-wrapper {
+.reset-btn {
     display: flex;
-    align-items: center;
+    justify-content: center;
 }
 
 
@@ -143,18 +183,6 @@ button {
     height: 80px;
     /* gleiche Höhe wie SVG */
     margin-left: 96px;
-}
-
-.headline {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-
-.reset-btn {
-    display: flex;
-    justify-content: center;
 }
 
 

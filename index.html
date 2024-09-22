@@ -6,11 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tic Tac Toe</title>
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./dialog_overlay.css">
     <script src="./script.js"></script>
 </head>
 
 <body onload="init()">
     <main>
+        <div id="overlay" class="overlay d_none">
+            <div class="dialog">
+                <div class="endgame-status">
+                    <h2 id="endgame_status"></h2>
+                </div>
+                <div class="reset-btn-dialog">
+                    <button onclick="closeOverlayDialog()">Close</button>
+                </div>
+            </div>
+        </div>
         <div class="headline">
             <h1>Tic Tac Toe</h1>
         </div>
@@ -27,7 +38,7 @@
                     </line>
                 </svg>
             </div>
-            <div class="game-board">
+            <div id="game_board" class="game-board">
                 <div id="cell_0" class="cell" onclick="handleClick(0)"></div>
                 <div id="cell_1" class="cell" onclick="handleClick(1)"></div>
                 <div id="cell_2" class="cell" onclick="handleClick(2)"></div>
@@ -40,7 +51,7 @@
             </div>
             <div class="player-o">
                 <svg width="80" height="80" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="40" cy="40" r="35" stroke="red" stroke-width="4" fill="none">
+                    <circle cx="40" cy="40" r="35" stroke="blue" stroke-width="4" fill="none">
                         <animate attributeName="r" from="0" to="35" dur="400ms" fill="freeze" />
                     </circle>
                 </svg>
