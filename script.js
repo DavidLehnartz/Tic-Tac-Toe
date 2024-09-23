@@ -1,4 +1,4 @@
-'use strict;'
+'use strict';
 
 /* MAIN SCRIPT */
 
@@ -35,6 +35,22 @@ function init() {
 // Players Turn Status -> Run -> handleClick() -> Init()
 function showPlayersTurn() {  // Diese Funktion zeigt an, wessen Zug es gerade ist
     document.getElementById('players_turn_status').innerHTML = `It\`s player ${currentPlayer} turn`;
+
+    showColorOfPlayer();
+}
+
+
+// Show Color Of Player
+function showColorOfPlayer() {
+    let playersTurnStatus = document.getElementById('players_turn_status');
+
+    playersTurnStatus.innerHTML = `It\`s player ${currentPlayer} turn`;
+
+    if (currentPlayer === 'X') {
+        playersTurnStatus.innerHTML = `It\`s player <span style="color: yellow">X</span> turn`;
+    } else {
+        playersTurnStatus.innerHTML = `It\`s player <span style="color: blue">O</span> turn`;
+    }
 }
 
 
@@ -45,8 +61,9 @@ function handleClick(index) {
     chooseAnimation(index);  // Animation einfügen und Feld als belegt markieren
 
     if (checkWin()) { // Überprüft, ob es Gewinner gibt **true**
+        let color = currentPlayer === 'X' ? 'yellow' : 'blue';
         document.getElementById('overlay').classList.remove('d_none');
-        document.getElementById('endgame_status').innerHTML = `Player ${currentPlayer} Win\`s !`;
+        document.getElementById('endgame_status').innerHTML = `Player <span style="color: ${color}">${currentPlayer}</span> wins!`;
         disableBoard();
     }
 
@@ -61,7 +78,7 @@ function handleClick(index) {
 
 
 // Is Field Blocked -> Run -> handleClick Func.
-function isFieldBlocked(index) { 
+function isFieldBlocked(index) {
     if (fields[index] !== null) { // Überprüft, ob Feld schon besetzt
         alert("This field is already occupied! Choose another field.");
         return true;
@@ -152,15 +169,32 @@ function closeOverlayDialog() {
 function getAnimationX() {
     return `
             <svg width="80" height="80" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
-                <line x1="10" y1="10" x2="70" y2="70" stroke="red" stroke-width="4">
-                    <animate attributeName="x2" from="10" to="70" dur="400ms" fill="freeze" />
-                    <animate attributeName="y2" from="10" to="70" dur="400ms" fill="freeze" />
+                <!-- Linie von der Mitte nach oben links -->
+                <line x1="40" y1="40" x2="40" y2="40" stroke="yellow" stroke-width="4">
+                    <animate attributeName="x2" from="40" to="10" dur="400ms" fill="freeze" />
+                    <animate attributeName="y2" from="40" to="10" dur="400ms" fill="freeze" />
                 </line>
-                <line x1="10" y1="70" x2="70" y2="10" stroke="red" stroke-width="4">
-                    <animate attributeName="x2" from="10" to="70" dur="400ms" fill="freeze" begin="400ms" />
-                    <animate attributeName="y2" from="70" to="10" dur="400ms" fill="freeze" begin="400ms" />
+    
+                <!-- Linie von der Mitte nach unten rechts -->
+                <line x1="40" y1="40" x2="40" y2="40" stroke="yellow" stroke-width="4">
+                    <animate attributeName="x2" from="40" to="70" dur="400ms" fill="freeze" />
+                    <animate attributeName="y2" from="40" to="70" dur="400ms" fill="freeze" />
+                </line>
+    
+                <!-- Linie von der Mitte nach unten links -->
+                <line x1="40" y1="40" x2="40" y2="40" stroke="yellow" stroke-width="4">
+                    <animate attributeName="x2" from="40" to="10" dur="400ms" fill="freeze" />
+                    <animate attributeName="y2" from="40" to="70" dur="400ms" fill="freeze" />
+                </line>
+    
+                <!-- Linie von der Mitte nach oben rechts -->
+                <line x1="40" y1="40" x2="40" y2="40" stroke="yellow" stroke-width="4">
+                    <animate attributeName="x2" from="40" to="70" dur="400ms" fill="freeze" />
+                    <animate attributeName="y2" from="40" to="10" dur="400ms" fill="freeze" />
                 </line>
             </svg>
+
+
     `;
 }
 

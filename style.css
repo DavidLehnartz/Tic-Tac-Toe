@@ -8,7 +8,7 @@ body {
     align-items: center;
     justify-content: center;
     height: 100vh;
-    margin: 0;
+    margin: 0px;
     background-color: #212121;
 }
 
@@ -21,19 +21,20 @@ main {
 }
 
 
-.d_none{
+.d_none {
     display: none;
 }
 
 
 h1 {
-    font-size: 40px;
-    margin-bottom: 20px;
+    font-size: 56px;
+    margin: 0px;
+    margin-bottom: 32px;
     color: #efefef;
 }
 
 
-h2{
+h2 {
     color: #efefef;
     margin: 0px;
 }
@@ -72,74 +73,74 @@ p {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #efefef;
+    background-color: #212121;
     cursor: pointer;
 }
 
 
 .cell:nth-child(1) {
     /* Oben links */
-    border-right: 4px solid #f1f1f1;
-    border-bottom: 4px solid #eceaea;
+    border-right: 4px solid #efefef;
+    border-bottom: 4px solid #efefef;
 }
 
 
 .cell:nth-child(2) {
     /* Oben Mitte */
-    border-left: 4px solid #212121;
-    border-right: 4px solid #212121;
-    border-bottom: 4px solid #212121;
+    border-left: 4px solid #efefef;
+    border-right: 4px solid #efefef;
+    border-bottom: 4px solid #efefef;
 }
 
 
 .cell:nth-child(3) {
     /* Oben rechts */
-    border-left: 4px solid #212121;
-    border-bottom: 4px solid #212121;
+    border-left: 4px solid #efefef;
+    border-bottom: 4px solid #efefef;
 }
 
 
 .cell:nth-child(4) {
     /* Mitte links */
-    border-top: 4px solid #212121;
-    border-right: 4px solid #212121;
-    border-bottom: 4px solid #212121;
+    border-top: 4px solid #efefef;
+    border-right: 4px solid #efefef;
+    border-bottom: 4px solid #efefef;
 }
 
 
 .cell:nth-child(5) {
     /* Mitte Mitte */
-    border: 4px solid #212121;
+    border: 4px solid #efefef;
 }
 
 
 .cell:nth-child(6) {
     /* Mitte rechts */
-    border-top: 4px solid #333;
-    border-left: 4px solid #333;
-    border-bottom: 4px solid #333;
+    border-top: 4px solid #efefef;
+    border-left: 4px solid #efefef;
+    border-bottom: 4px solid #efefef;
 }
 
 
 .cell:nth-child(7) {
     /* Unten links */
-    border-top: 4px solid #212121;
-    border-right: 4px solid #212121;
+    border-top: 4px solid #efefef;
+    border-right: 4px solid #efefef;
 }
 
 
 .cell:nth-child(8) {
     /* Unten Mitte */
-    border-left: 4px solid #212121;
-    border-top: 4px solid #212121;
-    border-right: 4px solid #212121;
+    border-left: 4px solid #efefef;
+    border-top: 4px solid #efefef;
+    border-right: 4px solid #efefef;
 }
 
 
 .cell:nth-child(9) {
     /* Unten rechts */
-    border-left: 4px solid #212121;
-    border-top: 4px solid #212121;
+    border-left: 4px solid #efefef;
+    border-top: 4px solid #efefef;
 }
 
 
@@ -190,3 +191,28 @@ button {
     display: flex;
     justify-content: center;
 }
+
+
+@media(max-width:830px) {
+    .player-o {
+        display: none;
+    }
+
+    .player-x {
+        display: none;
+    }
+}
+
+
+@media(max-width:480px) {
+    .game-board{
+        grid-template-columns: repeat(3, 100px);
+        grid-template-rows: repeat(3, 100px);
+    }
+
+    .cell{
+        width: 100px;
+        height: 100px;
+    }
+  
+} 
